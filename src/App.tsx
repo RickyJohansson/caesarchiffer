@@ -14,10 +14,10 @@ function App() {
   const decode = (inputValue: string) => {
     let tempString: string = '';
     for (let i = 0; i < inputValue.length; i++) {
-      if ((inputValue.charCodeAt(i) < 87 && inputValue.charCodeAt(i) > 64) || ( inputValue.charCodeAt(i) > 96 && inputValue.charCodeAt(i) < 119)) {
-        tempString += String.fromCharCode(inputValue.charCodeAt(i) + 4);
-      } else if ((inputValue.charCodeAt(i) >= 87 && inputValue.charCodeAt(i) <= 90) || ( inputValue.charCodeAt(i) >= 119 && inputValue.charCodeAt(i) <= 122) ) {
-        tempString += String.fromCharCode(inputValue.charCodeAt(i) + 4 - 26);
+      if ((inputValue.charCodeAt(i) < 91 && inputValue.charCodeAt(i) > 68) || ( inputValue.charCodeAt(i) > 100 && inputValue.charCodeAt(i) < 123)) {
+        tempString += String.fromCharCode(inputValue.charCodeAt(i) - 4);
+      } else if ((inputValue.charCodeAt(i) >= 65 && inputValue.charCodeAt(i) <= 68) || ( inputValue.charCodeAt(i) >= 97 && inputValue.charCodeAt(i) <= 100) ) {
+        tempString += String.fromCharCode( inputValue.charCodeAt(i) + 22 );
       } else if (inputValue.charCodeAt(i) == 32) {
         tempString += ' ';
       }
